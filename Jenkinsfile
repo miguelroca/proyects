@@ -33,7 +33,7 @@ pipeline {
 
     stage('Run') {
       steps {
-        powershell 'docker run --name proyectoApi -itd --rm -p 3000:3000 miguelroca/app3layer:2.0 .'
+        powershell 'docker run --name proyectoApi -itd --rm -p 3000:3000 miguelroca/app3layer:2.0'
       }
     }
 
