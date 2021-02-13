@@ -4,7 +4,8 @@ pipeline {
     stage('Inicio_Environment') {
       steps {
         echo 'Iniciando proyecto'
-        sh 'PATH'
+        powershell 'SET'
+        sh 'env'
       }
     }
 
