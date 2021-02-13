@@ -31,5 +31,11 @@ pipeline {
       }
     }
 
+    stage('Run') {
+      steps {
+        powershell 'run proyectoApi -itd --rm -p 3001:3001 app3layer.2.0 C:\\\\Users\\\\Miguel Roca\\\\curso_cdk\\\\session5\\\\01_proyecto\\src .'
+      }
+    }
+
   }
 }
