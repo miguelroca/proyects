@@ -5,7 +5,23 @@ pipeline {
       steps {
         echo 'Iniciando proyecto'
         powershell 'SET'
-        sh 'env'
+      }
+    }
+
+    stage('Docker_Environment') {
+      parallel {
+        stage('Docker_Environment') {
+          steps {
+            powershell 'docker -v'
+          }
+        }
+
+        stage('') {
+          steps {
+            powershell 'docker images'
+          }
+        }
+
       }
     }
 
