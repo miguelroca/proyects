@@ -16,12 +16,18 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Docker_Images') {
           steps {
             powershell 'docker images'
           }
         }
 
+      }
+    }
+
+    stage('Build') {
+      steps {
+        powershell 'docker build -t miguelroca/app3layer:2.0 .'
       }
     }
 
